@@ -1,0 +1,72 @@
+https://www.youtube.com/watch?v=BbilqOBOfg8
+Airbnb REACT.JS Challenge | Day 2 (Frontend Build - Next.js, Tailwind CSS, SSG, API)
+
+************* Extensions *************
+
+Tailwind CSS IntelliSense
+ES7+ React/Redux/React-Native/JS snippets
+
+function component ES7 -- _rfce //Error: if _rfce does not load, install v 3.1.1 of ES7+ React/Redux/React-Native/JS snippets
+
+https://flexboxfroggy.com/ --> Learn css flex 
+
+https://heroicons.com/ --> Icons 
+
+*********** Dependencies ***********
+
+//Tailwind
+	npm install -D tailwindcss postcss autoprefixer
+
+	npx tailwindcss init -p
+	
+	
+
+npm install @heroicons/react@v1
+
+npm i tailwind-scrollbar-hide
+
+#############################################################################
+************************************ GIT ************************************
+#############################################################################
+
+airbnb_demo>git remote add origin https://github.com/azteck/airbnb-demo.git
+
+airbnb_demo>git add .
+
+airbnb_demo>git status // if green then proceed to commit. if any red then again execute 'git add'
+
+airbnb_demo>git push
+
+airbnb_demo>git push --set-upstream origin main
+
+// if you get authentication error, try above command again. An new window should pop up and ask to authencticate via browser
+
+airbnb_demo>git push --set-upstream origin main
+info: please complete authentication in your browser...
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (19/19), 45.50 KiB | 2.53 MiB/s, done.
+Total 19 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/azteck/airbnb-demo.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+
+airbnb_demo>git commit -m "Day Two Build" 
+
+*********** Dependencies ***********
+airbnb_demo>npm i react-date-range
+
+airbnb_demo>npm i react date-fns 
+
+*********** Custom tailwindcss class ***********
+ create folder 'styles' under root if it already does not exist
+ create file styles\globals.css if it already does not exist
+
+ make sure it is imported in _app.js
+
+
+*********** Dependencies ***********
+ airbnb_demo>npm i @badrap/bar-of-progress //custom progress bar in _app.js
