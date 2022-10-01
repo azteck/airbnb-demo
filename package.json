@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3300",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.2.1",
+    "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^1.0.6",
+    "antd": "^4.23.3",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-date-range": "^1.4.0",

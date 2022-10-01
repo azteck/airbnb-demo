@@ -8,4 +8,8 @@ module.exports = {
     extend: {},
   },
   plugins: [require('tailwind-scrollbar-hide')],
+
+  /* corePlugins: {
+    preflight: false // <== disable this if Antd Modal has issues
+  }, */
 };
