@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 import { useRouter } from 'next/router';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
-import InfoCard from '../components/InfoCard';
+import InfoCard from '../components/cards/InfoCard';
 import data from '../data/data.js';
 
 /* TODO - Replace data.js and retrieve searchResults from server (server side rendering) and pass as props

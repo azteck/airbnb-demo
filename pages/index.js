@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
-import LargeCard from '../components/LargeCard';
-import MediumCard from '../components/MediumCard';
-import SmallCard from '../components/SmallCard';
+import LargeCard from '../components/cards/LargeCard';
+import MediumCard from '../components/cards/MediumCard';
+import SmallCard from '../components/cards/SmallCard';
 import data from '../data/data.js';
 
 /* TODO - Replace data.js and retrieve exploreData, cardsData from server (server side rendering) and pass as props

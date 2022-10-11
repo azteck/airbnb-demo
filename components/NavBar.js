@@ -7,16 +7,16 @@ import {
   UserCircleIcon,
   UsersIcon,
 } from '@heroicons/react/solid';
+import { Modal } from 'antd';
 import { useState } from 'react';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 import { DateRangePicker } from 'react-date-range';
 import { useRouter } from 'next/router';
 import { parseISO } from 'date-fns';
-//import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
-//import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import LoginSignupModal from './modals/LoginSignupModal';
 
 const { Items, Item, Button } = Menu; // to avoid typing Menu.Item
 
@@ -26,6 +26,8 @@ function NavBar({ placeholder }) {
   const [endDate, setEndDate] = useState(new Date());
   const [numOfGuests, setnumOfGuests] = useState(1);
   //const [isSearchBoxVisible, setIsSearchBoxVisible] = useState('true');
+  const [showModal, setShowModal] = useState(false);
+
   const router = useRouter();
 
   const selectionRange = {
@@ -61,6 +63,7 @@ function NavBar({ placeholder }) {
 
   const handleSignUpLogin = () => {
     console.log('Signup / Login');
+    setShowModal(!showModal);
   };
 
   function classNames(...classes) {
@@ -68,7 +71,7 @@ function NavBar({ placeholder }) {
   }
 
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-2 sm:p-3 md:px-10 text-gray-800">
+    <header className="sticky top-0 z-10 grid grid-cols-3 bg-white shadow-md p-2 sm:p-3 md:px-10 text-gray-800">
       {/* ***************************** Left - LOGO ***************************** */}
 
       <div className="relative flex items-center h-10 cursor-pointer my-auto">
@@ -89,7 +92,7 @@ function NavBar({ placeholder }) {
         <input
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
-          className="flex-grow pl-3 pr-3 bg-transparent outline-none text-gray-500 placeholder-gray-400 xs:text-sm text-clip overflow-hidden"
+          className="flex-grow pl-3 pr-3 bg-transparent outline-none text-gray-500 placeholder-gray-400 text-sm md:text-lg text-clip overflow-hidden"
           type="text"
           placeholder={placeholder || 'Start your search'}
         />
@@ -97,10 +100,10 @@ function NavBar({ placeholder }) {
       </div>
 
       {/* *************** Right - Become a host Text/Icon Links *************** */}
-      <div className="flex items-center justify-end space-x-4 ">
-        <p className="hidden lg:inline text-gray-500 cursor-pointer">
+      <div className="inline-flex items-center justify-end space-x-4  ">
+        <div className="hidden lg:inline-flex text-lg font-semibold text-gray-500 cursor-pointer">
           Become a host
-        </p>
+        </div>
         <GlobeAltIcon className="hidden sm:inline-flex  h-6 text-gray-600 cursor-pointer" />
         {/* <div className="flex items-center space-x-2 border-2 p-2 rounded-full"> */}
         {/* *************** Right - DROPDOWN MENU Login/Signup - https://headlessui.com/react/menu *************** */}
@@ -223,6 +226,8 @@ function NavBar({ placeholder }) {
           </div>
         </div>
       )}
+
+      <LoginSignupModal showModal={showModal} setShowModal={setShowModal} />
     </header>
   );
 }
