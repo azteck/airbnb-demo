@@ -15,13 +15,22 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+hr.default {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 2px;
+}
+
+@media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    color-scheme: light;
   }
   body {
     color: white;
-    background: black;
   }
 }
 
@@ -33,4 +42,9 @@ a {
     .button {
         @apply px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 select-none active:bg-gray-100 transition transform duration-200 ease-out;
     }
+
+    .socialLoginButton {
+      @apply flex  w-full outline outline-1 outline-gray-500 border-gray-500 rounded-lg p-2 font-semibold text-base hover:bg-gray-100
+    }
 }
+
