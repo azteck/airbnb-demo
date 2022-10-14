@@ -1,38 +1,31 @@
 .modalStyle .ant-modal-header {
-    border-radius: 10px 10px 0 0;
-    font-weight: bold ;
-    text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: white;
-  }
-  
-  .ant-modal-content {
-    border-radius: 10px;
-  }
-  
-  .modalStyle .ant-modal-content {
-    background-color: white;
-    
-  }
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: white;
+}
 
-  hr.login {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    text-align: center;
+.modalStyle .ant-modal-content {
+  background-color: white;
+  border-radius: 10px;
+
 }
-  hr.login2 {
-    overflow: visible; /* For IE */
-    padding: 0;
-    border-top: medium double gray;
-    text-align: center;
+
+hr.login {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
 }
+
 hr.login:after {
-    content: "or";
-    display: inline-block;
-    position: relative;
-    top: -1em;
-    padding: 0 1em;
-    background: white;
+  content: "or";
+  display: inline-block;
+  position: relative;
+  top: -1em;
+  padding: 0 1em;
+  background: white;
 }
+
