@@ -15,15 +15,7 @@ a {
   box-sizing: border-box;
 }
 
-hr.default {
-  display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 2px;
-}
+
 
 @media (prefers-color-scheme: light) {
   html {
@@ -32,6 +24,13 @@ hr.default {
   body {
     color: white;
   }
+}
+
+/* disable select */
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 @tailwind base;
@@ -47,4 +46,3 @@ hr.default {
       @apply flex  w-full outline outline-1 outline-gray-500 border-gray-500 rounded-lg p-2 font-semibold text-base hover:bg-gray-100
     }
 }
-

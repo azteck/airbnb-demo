@@ -15,7 +15,7 @@ function InfoCard({ img, location, title, description, star, price, total }) {
         />
       </div>
 
-      <div className="flex flex-col pl-5">
+      <div className="flex flex-col w-full pl-5">
         <div className="flex justify-between">
           <p>{location}</p>
           <HeartIcon className="h-7 cursor-pointer" />
