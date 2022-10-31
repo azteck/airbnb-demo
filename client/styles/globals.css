@@ -1,0 +1,48 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: white;
+  }
+}
+
+/* disable select */
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .button {
+        @apply px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 select-none active:bg-gray-100 transition transform duration-200 ease-out;
+    }
+
+    .socialLoginButton {
+      @apply flex  w-full outline outline-1 outline-gray-500 border-gray-500 rounded-lg p-2 font-semibold text-base hover:bg-gray-100
+    }
+}
